@@ -13,19 +13,19 @@ body{
 }
 
 .imggirl{
-  background:url('../public/girl.png');
+  background:url('../public/tourspace.jpg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .imggirl1{
-  background:url('../public/package.png');
+  background:url('../public/asteriod.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .vid{
-  background-clip:url('../public/vid.mp4');
+  background:url('../public/tourspace.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
