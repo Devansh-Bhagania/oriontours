@@ -1,22 +1,31 @@
-import React from "react";
+"use client"
+import React, {useEffect} from "react";
 import Image from "next/image";
 import image1 from "/public/homepage.jpg";
 import image2 from "/public/logo.png";
 import imageg from "/public/girl.png";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Homepage = () => {
+    useEffect(() => {
+        AOS.init({
+             duration: 800,
+             once: false,
+           })
+     }, [])
   return (
     <>
       <div className="h-[736px]">
-        <nav className="h-[100px] flex flex-row gap-5 space-between justify-end p-10 text-md transparent -mb-[40px] ">
+        <nav className="h-[100px] flex flex-row gap-5 space-between justify-end p-10 text-md transparent -mb-[40px]  " data-aos="fade-up">
           <div className="justify-end text-gray-300 -mt-[24px]">
             <Image src={image2} width={80} alt="Picture of the author" />
           </div>
           <div className="grow"></div>
           {/* flex  */}
           <div className="flex flex-row text-gray-200 gap-10 mr-10 ">
-            <div>HOME</div>
-            <div>TOUR PACKAGES</div>
-            <div>CONTACT US</div>
+            <div data-aos="fade-up">HOME</div>
+            <div data-aos="fade-up">TOUR PACKAGES</div>
+            <div data-aos="fade-up" >CONTACT US</div>
             <div>FEEDBACK</div>
           </div>
           <div>
@@ -26,11 +35,11 @@ const Homepage = () => {
 
         <div className="h-[200px]  mt-[400px] flex  text-white justify-end transparent">
           <div className="flex flex-col gap-2">
-            <h1 className="pr-[50px] text-4xl">WHERE SPACE BECOMES</h1>
+            <h1 className="pr-[50px] text-4xl" data-aos="fade-left">WHERE SPACE BECOMES</h1>
             <br />
-            <h1 className="pr-[50px] text-4xl">YOUR ADVENTURE</h1>
+            <h1 className="pr-[50px] text-4xl" data-aos="fade-left">YOUR ADVENTURE</h1>
             <div>
-              <button className="px-4  ml-2 mt-2 py-2 border-2 border-gray-200 text-bold">
+              <button className="px-4  ml-2 mt-2 py-2 border-2 border-gray-200 text-bold" data-aos="fade-left">
                 LEARN MORE
               </button>
             </div>
@@ -45,13 +54,13 @@ const Homepage = () => {
             className="h-[600px] object-fit"
             alt="Picture of the author"
           />
-          <div className="absolute top-[130px] w-[490px] left-[80px] text-2xl text-gray-200 leading-[43px] ">
+          <div className="absolute top-[130px] w-[490px] left-[80px] text-2xl text-gray-200 leading-[43px] " data-aos="fade-right">
             Our company stands out for crafting immersive and thematic travel
             experiences centered around space exploration. From moon bases to
             interstellar observatories, every itinerary is carefully designed to
             offer customers a journey beyond Earth.
             <div>
-              <button className="px-4 text-xl mt-4  ml-0 mt-2 py-2 border-2 border-gray-200 text-bold">
+              <button className="px-4 text-xl mt-4  ml-0 mt-2 py-2 border-2 border-gray-200 text-bold" data-aos="fade-right">
                 About Us
               </button>
             </div>
@@ -61,11 +70,11 @@ const Homepage = () => {
         <div className="imggirl1 h-[650px] ">
           <div className=" w-auto flex flex-col  h-[200px]">
             <div className="h-[130px]  text-center p-5">
-              <h1 className="text-5xl ">Celestial Explorer Package</h1>
+              <h1 className="text-5xl " data-aos="fade-down">Celestial Explorer Package</h1>
             </div>
 
             <div className="h-auto  justify-center gap-10 flex flex-row px-20 p-10">
-              <div className="w-1/3 border-2 border-gray-200 h-auto transparent flex flex-col gap-2 text-center pt-2 backdrop-blur">
+              <div className="w-1/3 border-2 border-gray-200 h-auto transparent flex flex-col gap-2 text-center pt-2 backdrop-blur " data-aos="zoom-in">
               <h1 className="mb-5 text-3xl font-bold text-gray-900">MOON BASE</h1>
                 <h1 className="font-bold text-gray-900">DURATION</h1>
                 <p >6 DAYS</p>
@@ -78,7 +87,7 @@ const Homepage = () => {
 
 
               </div>
-              <div className="w-1/3 border-2 border-gray-200 h-auto transparent flex flex-col gap-2 text-center pt-2 backdrop-blur">
+              <div className=" w-1/3 border-2 border-gray-200 h-auto transparent flex flex-col gap-2 text-center pt-2 backdrop-blur" data-aos="zoom-in">
               <h1 className="mb-5 text-3xl font-bold text-gray-900">VENUS</h1>
                 <h1 className="font-bold text-gray-900">DURATION</h1>
                 <p >6 DAYS</p>
@@ -90,7 +99,7 @@ const Homepage = () => {
                 <p className="text-center px-3">Floating city exploration and cloud-surfing on Venus.</p>
 
 
-              </div><div className="w-1/3 border-2 border-gray-200 h-auto transparent flex flex-col gap-2 text-center pt-2 backdrop-blur">
+              </div><div className="w-1/3 border-2 border-gray-200 h-auto transparent flex flex-col gap-2 text-center pt-2 backdrop-blur" data-aos="zoom-in">
               <h1 className="mb-5 text-3xl font-bold text-gray-900">SPACE ODESSEY</h1>
                 <h1 className="font-bold text-gray-900">DURATION</h1>
                 <p >6 DAYS</p>
